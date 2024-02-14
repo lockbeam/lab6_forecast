@@ -5,8 +5,16 @@ import os
 import requests
 from pprint import pprint
 from datetime import datetime
+import logging
+
+# Configure your logger. filename - where to write to. otherwise logs write to the console
+# level is the minimum log level that is recorded. DEBUG means log everything. 
+# format sets the format of the string that is recorder for each log event. 
+logging.basicConfig(filename='debug.log', level=logging.DEBUG, format=f'%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 key = os.environ.get('WEATHER_KEY')
+if not key:
+    logging.debug(f'Problem connecting to key')
 url = 'https://api.openweathermap.org/data/2.5/forecast'
 
 def main():
@@ -14,6 +22,7 @@ def main():
     weather_data, error = get_current_weather(location, key)
     if error:
         print('Sorry, could not get the weather')
+        logging.debug(f'Error retrieving weather data due to {error}')
     else:
         get_temp(weather_data)
 
@@ -22,9 +31,12 @@ def get_location():
     
     while len(city) == 0:
         city = input('What city do you want the temp of? ').strip()
+        logging.info(f'User inputted {city}')
     
     while len(country) != 2 or not country.isalpha():
         country = input('What country is that city in using the two letter country code? ').strip()
+        logging.info(f'User inputted {country}')
+
 
     location = f'{city},{country}'
     return location
@@ -39,8 +51,8 @@ def get_current_weather(location, key):
         data = response.json() # may error if response not JSON
         return data, None # return data and NO error
     except Exception as e:
-        print(e)
-        print(response.text) # for debugging as needed
+        logging.exception(f'Error requesting {e}')
+        logging.exception(response.text) # for debugging as needed
         return None, e # return NO data and error
     
 def get_temp(weather_data):
@@ -55,8 +67,9 @@ def get_temp(weather_data):
             # It would be nice to show a local time for the city requested as people are often looking at a forecast of the area they are in or planning to be in
             forecast_date = datetime.fromtimestamp(timestamp)
             print(f'On {forecast_date} UTC the weather is forecasted to be: \nTemperature: {temp}\nWind Speed: {wind_speed}\nDescription: {weather_description}\n')
+            logging.info('Successfully executed full program')
     except KeyError:
-        print('This data is not in the format expected')
+        logging.info('This data is not in the format expected')
     
 if __name__ == '__main__':
     main()
