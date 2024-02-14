@@ -1,0 +1,44 @@
+2024-02-14 13:45:52,669 - root - INFO - User inputted minneapolis
+2024-02-14 13:45:53,743 - root - INFO - User inputted us
+2024-02-14 13:45:53,748 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openweathermap.org:443
+2024-02-14 13:45:54,653 - urllib3.connectionpool - DEBUG - https://api.openweathermap.org:443 "GET /data/2.5/forecast?q=minneapolis%2Cus&units=imperial&appid=ba5b32653d02c5fa8fc7729446147f8b HTTP/1.1" 200 15917
+2024-02-14 13:45:54,659 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,660 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,662 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,663 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,664 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,665 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,666 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,667 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,668 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,669 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,669 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,670 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,673 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,674 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,675 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,676 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,676 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,678 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,678 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,679 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,679 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,719 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,720 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,720 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,721 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,722 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,722 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,741 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,742 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,742 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,744 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,744 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,745 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,745 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,747 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,747 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,748 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,748 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,749 - root - INFO - Successfully executed full program
+2024-02-14 13:45:54,750 - root - INFO - Successfully executed full program

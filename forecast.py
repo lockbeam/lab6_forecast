@@ -31,11 +31,11 @@ def get_location():
     
     while len(city) == 0:
         city = input('What city do you want the temp of? ').strip()
-        logging.info(f'User inputted {city}')
+        logging.info(f'User inputted {city} for city')
     
     while len(country) != 2 or not country.isalpha():
         country = input('What country is that city in using the two letter country code? ').strip()
-        logging.info(f'User inputted {country}')
+        logging.info(f'User inputted {country} for country')
 
 
     location = f'{city},{country}'
@@ -67,7 +67,7 @@ def get_temp(weather_data):
             # It would be nice to show a local time for the city requested as people are often looking at a forecast of the area they are in or planning to be in
             forecast_date = datetime.fromtimestamp(timestamp)
             print(f'On {forecast_date} UTC the weather is forecasted to be: \nTemperature: {temp}\nWind Speed: {wind_speed}\nDescription: {weather_description}\n')
-            logging.info('Successfully executed full program')
+        logging.info('Successfully executed full program')
     except KeyError:
         logging.info('This data is not in the format expected')
     
