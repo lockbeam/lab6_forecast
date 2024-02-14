@@ -51,8 +51,10 @@ def get_temp(weather_data):
             timestamp = forecast['dt']
             weather_description = forecast['weather'][0]['description']
             wind_speed = forecast['wind']['speed']
+            # Timestamp uses system time so would be CST not GCT, makes sense for reporting forecast in minneapolis at minneapolis time
+            # It would be nice to show a local time for the city requested as people are often looking at a forecast of the area they are in or planning to be in
             forecast_date = datetime.fromtimestamp(timestamp)
-            print(f'On {forecast_date} the weather is forecasted to be: \nTemperature: {temp}\nWind Speed: {wind_speed}\nDescription: {weather_description}\n')
+            print(f'On {forecast_date} UTC the weather is forecasted to be: \nTemperature: {temp}\nWind Speed: {wind_speed}\nDescription: {weather_description}\n')
     except KeyError:
         print('This data is not in the format expected')
     
